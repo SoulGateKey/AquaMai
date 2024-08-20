@@ -24,14 +24,14 @@ public class BasicFix
         __result = true;
         return false;
     }
-
-    [HarmonyPrefix]
-    [HarmonyPatch(typeof(AMDaemon.Network), "IsLanAvailable", MethodType.Getter)]
-    private static bool PreIsLanAvailable(ref bool __result)
-    {
-        __result = false;
-        return false;
-    }
+    
+    // [HarmonyPrefix]
+    // [HarmonyPatch(typeof(AMDaemon.Network), "IsLanAvailable", MethodType.Getter)]
+    // private static bool PreIsLanAvailable(ref bool __result)
+    // {
+    //     __result = false;
+    //     return false;
+    // }
 
     [HarmonyPostfix]
     [HarmonyPatch(typeof(OperationManager), "CheckAuth_Proc")]
